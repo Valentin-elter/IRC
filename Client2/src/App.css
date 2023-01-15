@@ -1,0 +1,281 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color:rgb(38, 31, 44);
+}
+
+.App {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color:rgb(38, 31, 44);
+  margin-left: 320px;
+}
+
+.logIn {
+  width: 600px;
+  height: 350px;
+  border: 5px solid rgb(70, 70, 255);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 280px;
+}
+
+.logIn h1 {
+  margin-top: 45px;
+  font-size: 50px;
+  color: white;
+}
+
+.logIn input {
+  width: 270px;
+  height: 50px;
+  border: 2px solid rgb(70, 70, 255);
+  background-color: transparent;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.logIn input:focus {
+outline: none;
+}
+
+.logIn button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: rgb(70, 70, 255);
+  font-size: 20px;
+  margin-top: 45px;
+  border-radius: 20px;
+  color: white;
+}
+
+.logIn button:hover {
+  cursor: pointer;
+  background-color: rgb(59, 59, 221);
+}
+
+.IRC {
+  width: 1200px;
+  height: 800px;
+  border: 5px solid rgb(70, 70, 255);
+  border-radius: 15px;
+  display: grid; 
+  grid-template-columns: 0.7fr 1.3fr; 
+  grid-template-rows: 3.4fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "settings chat"; 
+}
+
+.settings {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 2.1fr 0.6fr 0.3fr; 
+  gap: 0px 0px; 
+  grid-area: settings; 
+  border-right: 5px solid rgb(70, 70, 255);
+}
+
+.subchan {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: bisque;
+  overflow: scroll;
+  height: 555px;
+  border-top-left-radius: 10px;
+  border-bottom: 5px solid rgb(70, 70, 255);
+}
+
+.subchan button {
+  background-color: rgb(255, 195, 116);
+  color: white;
+  font-weight: bold;
+  border: 1px solid bisque;
+  margin-bottom: 1px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.subchan button {
+  width: 100%;
+  height: 8%;
+  font-size: 25px;
+  overflow: hidden;
+}
+
+.subchan button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 178, 91);
+}
+
+.chan {
+  grid-area: 2 / 1 / 4 / 2;
+  background-color: bisque;
+  height: 155px;
+  border-bottom: 5px solid rgb(70, 70, 255);
+  display: inline-block;
+  overflow: scroll;
+  padding-left: 20px;
+}
+
+.chan button {
+  background-color: rgb(255, 195, 116);
+  width: 100px;
+  height: 50px;
+  margin: 13px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.chan button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 178, 91);
+}
+
+.actions {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: rgb(248, 187, 112);
+  border-bottom-left-radius: 10px;
+  overflow: scroll;
+  padding-left: 15px;
+}
+
+.actions button{
+  background-color: rgb(255, 153, 29);
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+}
+
+.actions button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 136, 0);
+}
+
+.chat {
+  background-color:rgb(206, 206, 206);
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1.8fr 0.2fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "thread"
+    "threadput"; 
+  grid-area: chat;
+  border-top-right-radius: 10px;
+}
+
+.thread {
+  background-color:rgb(206, 206, 206);
+  grid-area: thread; 
+  border-bottom: 5px solid rgb(70, 70, 255);
+  padding: 10px;
+  overflow: scroll;
+  max-height: 695px;
+  border-top-right-radius: 10px;
+}
+
+.getMessage {
+  margin-top: 15px;
+  background-color: rgb(66, 66, 66);
+  border-radius: 25px;
+  max-width: 600px;
+  min-width: 380px;
+  padding: 10px;
+  overflow-wrap: break-word;
+  float: left;
+}
+
+.myMessage {
+  margin-top: 15px;
+  background-color: blue;
+  border-radius: 25px;
+  max-width: 600px;
+  min-width: 380px;
+  padding: 10px;
+  overflow-wrap: break-word;
+  float: right;
+}
+
+.timeMessage {
+  font-size: 18px;
+  color: rgb(167, 167, 167);
+}
+
+.textMessage {
+  font-size: 28px;
+  color: white;
+}
+
+.threadput { 
+  background-color: hotpink;
+  grid-area: threadput;
+  display: flex;
+  flex-direction: row;
+}
+
+.threadput input { 
+  flex: 80%;
+  height: calc(100% - 6px);
+  padding-left: 20px;
+  font-size: 20px;
+  border-right: 5px solid rgb(70, 70, 255);;
+  overflow: scroll;
+}
+
+.threadput input:focus {
+  outline: none;
+  }
+
+.threadput button { 
+  flex: 20%;
+  height: 100%;
+  background-color: rgb(70, 70, 255);
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  
+}
+
+.threadput button:hover {
+  cursor: pointer;
+  background-color: rgb(59, 59, 221);
+}
+
+.inpbox {
+  height: 200px;
+  width: 500px;
+  background-color: rgb(252, 192, 120);
+  position: absolute;
+  z-index: 2;
+  left: 800px;
+  top: 200px;
+  border-radius: 100px;
+  border: 2px solid rgb(255, 255, 255);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.inpbox p{
+  margin-top: 50px;
+}
